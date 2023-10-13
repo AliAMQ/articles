@@ -2,7 +2,7 @@ package com.ali.news.api.v1.dto;
 
 import java.util.Objects;
 
-public class NewsResponseDto {
+public class ArticleResponseDto {
     private String title;
     private String description;
     private String content;
@@ -11,7 +11,7 @@ public class NewsResponseDto {
     private String publishedAt;
     private SourceResponseDto source;
 
-    public NewsResponseDto(String title, String description, String content, String url, String image, String publishedAt, SourceResponseDto source) {
+    public ArticleResponseDto(String title, String description, String content, String url, String image, String publishedAt, SourceResponseDto source) {
         this.title = title;
         this.description = description;
         this.content = content;
@@ -19,6 +19,10 @@ public class NewsResponseDto {
         this.image = image;
         this.publishedAt = publishedAt;
         this.source = source;
+    }
+
+    public ArticleResponseDto() {
+
     }
 
     public String getTitle() {
@@ -81,7 +85,7 @@ public class NewsResponseDto {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        NewsResponseDto that = (NewsResponseDto) o;
+        ArticleResponseDto that = (ArticleResponseDto) o;
         return Objects.equals(title, that.title) && Objects.equals(description, that.description) && Objects.equals(content, that.content) && Objects.equals(url, that.url) && Objects.equals(image, that.image) && Objects.equals(publishedAt, that.publishedAt) && Objects.equals(source, that.source);
     }
 

@@ -2,12 +2,14 @@ package com.ali.news;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
 
 @SpringBootApplication
-public class NewsApplication {
+@EnableCaching
+public class ArticlesApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(NewsApplication.class, args);
+        SpringApplication.run(ArticlesApplication.class, args);
     }
 
 }
